@@ -31,7 +31,9 @@ def acquire_and_use_token():
     # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
     # a token from cache, and fall back to acquire a fresh token when needed.
     result = global_app.acquire_token_for_client(scopes=config["scope"])
+    print(result)
 
+    
     if "access_token" in result:
         print("Token was obtained from:", result["token_source"])  # Since MSAL 1.25
         # Calling graph using the access token
@@ -39,6 +41,8 @@ def acquire_and_use_token():
             config["endpoint"],
             headers={'Authorization': 'Bearer ' + result['access_token']},).json()
         print("Graph API call result: %s" % json.dumps(graph_data, indent=2))
+    
+
     else:
         print("Token acquisition failed")  # Examine result["error_description"] etc. to diagnose error
 
@@ -46,4 +50,4 @@ def acquire_and_use_token():
 while True:  # Here we mimic a long-lived daemon
     acquire_and_use_token()
     print("Press Ctrl-C to stop.")
-    time.sleep(5)  # Let's say your app would run a workload every X minutes
+    time.sleep(500)  # Let's say your app would run a workload every X minutes
