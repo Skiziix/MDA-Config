@@ -204,9 +204,9 @@ def acquire_and_use_token():
     if "access_token" in token:
         print("Token was obtained from:", token["token_source"])  # Since MSAL 1.25
         # Calling graph using the access token
-        response = requests.get(  # Use token to call downstream service
+        response = requests.post(  # Use token to call downstream service
             config["endpoint"],
-            headers=post_headers,).json()
+            headers=post_headers, json=picklist_global_choice).json()
         
         if response.status_code == 200:
             print("Success!")
