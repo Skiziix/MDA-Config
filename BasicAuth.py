@@ -197,17 +197,28 @@ def acquire_and_use_token():
         'If-None-Match': 'null',
         'Accept': 'application/json',
         'Content-Type': 'application/json; charset=utf-8',
+        'Authorization': 'Bearer ' + token['access_token'],
     }
     
+    # Existent token
     if "access_token" in token:
         print("Token was obtained from:", token["token_source"])  # Since MSAL 1.25
         # Calling graph using the access token
         response = requests.get(  # Use token to call downstream service
             config["endpoint"],
-            headers={'Authorization': 'Bearer ' + token['access_token']},).json()
-        print("Graph API call token: %s" % json.dumps(response, indent=2))
-    
+            headers=post_headers,).json()
+        
+        if response.status_code == 200:
+            print("Success!")
+            print("Graph API call token: %s" % json.dumps(response, indent=2))
 
+        elif response.status_code == 401:
+            print("Unauthorized.")
+
+        else:
+            print("Error!")
+
+        
     else:
         print("Token acquisition failed")  # Examine token["error_description"] etc. to diagnose error
 
