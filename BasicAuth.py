@@ -189,6 +189,15 @@ def acquire_and_use_token():
         "SchemaName": "SampleChoice2"
     }
 
+    # Json model of headers needed to post to projects table in Sandbox_Mowery
+    post_headers = headers = {
+        'MSCRM.SolutionName': 'MoweryCRM',
+        'OData-MaxVersion': '4.0',
+        'OData-Version': '4.0',
+        'If-None-Match': 'null',
+        'Accept': 'application/json',
+        'Content-Type': 'application/json; charset=utf-8',
+    }
     
     if "access_token" in token:
         print("Token was obtained from:", token["token_source"])  # Since MSAL 1.25
