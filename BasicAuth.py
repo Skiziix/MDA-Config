@@ -121,4 +121,3 @@ def acquire_and_use_token():
 
 
 acquire_and_use_token()
-
