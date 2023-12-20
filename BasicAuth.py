@@ -223,7 +223,5 @@ def acquire_and_use_token():
         print("Token acquisition failed")  # Examine token["error_description"] etc. to diagnose error
 
 
-while True:  # Here we mimic a long-lived daemon
-    acquire_and_use_token()
-    print("Press Ctrl-C to stop.")
-    time.sleep(5)  # Let's say your app would run a workload every X minutes
+acquire_and_use_token()
+
