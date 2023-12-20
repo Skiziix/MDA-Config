@@ -40,113 +40,7 @@ def acquire_and_use_token():
             "Value": "PicklistType"
         },
         "SourceTypeMask": 0,
-        "OptionSet": {
-            "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
-            "Options": [
-            {
-                "Value": 727000000,
-                "Label": {
-                "@odata.type": "Microsoft.Dynamics.CRM.Label",
-                "LocalizedLabels": [
-                    {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Bravo",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                    }
-                ],
-                "UserLocalizedLabel": {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Bravo",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                }
-                }
-            },
-            {
-                "Value": 727000001,
-                "Label": {
-                "@odata.type": "Microsoft.Dynamics.CRM.Label",
-                "LocalizedLabels": [
-                    {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Delta",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                    }
-                ],
-                "UserLocalizedLabel": {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Delta",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                }
-                }
-            },
-            {
-                "Value": 727000002,
-                "Label": {
-                "@odata.type": "Microsoft.Dynamics.CRM.Label",
-                "LocalizedLabels": [
-                    {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Alpha",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                    }
-                ],
-                "UserLocalizedLabel": {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Alpha",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                }
-                }
-            },
-            {
-                "Value": 727000003,
-                "Label": {
-                "@odata.type": "Microsoft.Dynamics.CRM.Label",
-                "LocalizedLabels": [
-                    {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Charlie",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                    }
-                ],
-                "UserLocalizedLabel": {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Charlie",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                }
-                }
-            },
-            {
-                "Value": 727000004,
-                "Label": {
-                "@odata.type": "Microsoft.Dynamics.CRM.Label",
-                "LocalizedLabels": [
-                    {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Foxtrot",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                    }
-                ],
-                "UserLocalizedLabel": {
-                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Foxtrot",
-                    "LanguageCode": 1033,
-                    "IsManaged": False
-                }
-                }
-            }
-            ],
-            "IsGlobal": False,
-            "OptionSetType": "Picklist"
-        },
+        "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(b0a161bd-409f-ee11-be37-6045bd0064ab)",
         "Description": {
             "@odata.type": "Microsoft.Dynamics.CRM.Label",
             "LocalizedLabels": [
@@ -169,14 +63,14 @@ def acquire_and_use_token():
             "LocalizedLabels": [
             {
                 "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                "Label": "Sample Choice 2.0",
+                "Label": "Sample Choice 3.0",
                 "LanguageCode": 1033,
                 "IsManaged": False
             }
             ],
             "UserLocalizedLabel": {
             "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-            "Label": "Sample Choice 2.0",
+            "Label": "Sample Choice 3.0",
             "LanguageCode": 1033,
             "IsManaged": False
             }
@@ -186,7 +80,7 @@ def acquire_and_use_token():
             "CanBeChanged": False,
             "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
         },
-        "SchemaName": "SampleChoice2"
+        "SchemaName": "mow_SampleChoice3"
     }
 
     # Json model of headers needed to post to projects table in Sandbox_Mowery
@@ -208,11 +102,12 @@ def acquire_and_use_token():
             config["endpoint"],
             headers=post_headers, json=picklist_global_choice)
         
-        json_response = response.json()
+        #json_response = response.json()
         
         if response.status_code == 200:
             print("Success!")
-            print("Graph API call token: %s" % json.dumps(json_response, indent=2))
+            print(response.headers)
+            #print("Graph API call token: %s" % json.dumps(json_response, indent=2))
 
         elif response.status_code == 401:
             print("Unauthorized.")
