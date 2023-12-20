@@ -206,11 +206,13 @@ def acquire_and_use_token():
         # Calling graph using the access token
         response = requests.post(  # Use token to call downstream service
             config["endpoint"],
-            headers=post_headers, json=picklist_global_choice).json()
+            headers=post_headers, json=picklist_global_choice)
+        
+        json_response = response.json()
         
         if response.status_code == 200:
             print("Success!")
-            print("Graph API call token: %s" % json.dumps(response, indent=2))
+            print("Graph API call token: %s" % json.dumps(json_response, indent=2))
 
         elif response.status_code == 401:
             print("Unauthorized.")
