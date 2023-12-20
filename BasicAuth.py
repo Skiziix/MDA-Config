@@ -32,6 +32,163 @@ def acquire_and_use_token():
     # a token from cache, and fall back to acquire a fresh token when needed.
     result = global_app.acquire_token_for_client(scopes=config["scope"])
 
+    # Json model of attribute to be created
+    picklist_global_choice = {
+        "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
+        "AttributeType": "Picklist",
+        "AttributeTypeName": {
+            "Value": "PicklistType"
+        },
+        "SourceTypeMask": 0,
+        "OptionSet": {
+            "@odata.type": "Microsoft.Dynamics.CRM.OptionSetMetadata",
+            "Options": [
+            {
+                "Value": 727000000,
+                "Label": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                    {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Bravo",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                    }
+                ],
+                "UserLocalizedLabel": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Bravo",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                }
+            },
+            {
+                "Value": 727000001,
+                "Label": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                    {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Delta",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                    }
+                ],
+                "UserLocalizedLabel": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Delta",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                }
+            },
+            {
+                "Value": 727000002,
+                "Label": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                    {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Alpha",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                    }
+                ],
+                "UserLocalizedLabel": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Alpha",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                }
+            },
+            {
+                "Value": 727000003,
+                "Label": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                    {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Charlie",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                    }
+                ],
+                "UserLocalizedLabel": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Charlie",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                }
+            },
+            {
+                "Value": 727000004,
+                "Label": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                    {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Foxtrot",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                    }
+                ],
+                "UserLocalizedLabel": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Foxtrot",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                }
+            }
+            ],
+            "IsGlobal": True,
+            "OptionSetType": "Picklist"
+        },
+        "Description": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+            {
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                "Label": "Choice Attribute",
+                "LanguageCode": 1033,
+                "IsManaged": False
+            }
+            ],
+            "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Choice Attribute",
+            "LanguageCode": 1033,
+            "IsManaged": False
+            }
+        },
+        "DisplayName": {
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",
+            "LocalizedLabels": [
+            {
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                "Label": "Sample Choice 2.0",
+                "LanguageCode": 1033,
+                "IsManaged": False
+            }
+            ],
+            "UserLocalizedLabel": {
+            "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+            "Label": "Sample Choice 2.0",
+            "LanguageCode": 1033,
+            "IsManaged": False
+            }
+        },
+        "RequiredLevel": {
+            "Value": "None",
+            "CanBeChanged": False,
+            "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+        },
+        "SchemaName": "SampleChoice2"
+    }
+
     
     if "access_token" in result:
         print("Token was obtained from:", result["token_source"])  # Since MSAL 1.25
