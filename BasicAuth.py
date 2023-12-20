@@ -144,7 +144,7 @@ def acquire_and_use_token():
                 }
             }
             ],
-            "IsGlobal": True,
+            "IsGlobal": False,
             "OptionSetType": "Picklist"
         },
         "Description": {
@@ -218,7 +218,7 @@ def acquire_and_use_token():
             print("Unauthorized.")
 
         else:
-            print("Error!")
+            print(response.content)
 
         
     else:
