@@ -228,16 +228,12 @@ class PowerAppEntity:
             
             # Successful POST
             if response.status_code == 204:
-                print("Success!")
-                print(response.headers)
-
-            # Unauthorized to POST
-            elif response.status_code == 401:
-                print("Unauthorized.")
+                print("Success! (" + response.headers['Date'] + ") [" + post_body['SchemaName'] + "]")
 
             # Other Error
             else:
-                print(response.content)
+                print("Error! (" +  str(response.status_code) + ") {'Error Code': " + response.json()['error']['code'] + ", 'Message': " + response.json()['error']['message'] + "}")
+
 
         # Unable to acquire token            
         else:
