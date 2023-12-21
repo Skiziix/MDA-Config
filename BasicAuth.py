@@ -31,12 +31,7 @@ class PowerAppEntity:
                 # If absent, ClientApplication will create its own empty token cache
             )
 
-
-    def acquire_token(self):
-        # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
-        # a token from cache, and fall back to acquire a fresh token when needed.
-        token = self.global_app.acquire_token_for_client(scopes=config["scope"])
-
+    def post_global_choice_attribute(self, schema_name, label_name, global_option_id):
         # Json model of attribute to be created
         picklist_global_choice = {
             "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
@@ -45,7 +40,7 @@ class PowerAppEntity:
                 "Value": "PicklistType"
             },
             "SourceTypeMask": 0,
-            "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(b0a161bd-409f-ee11-be37-6045bd0064ab)",
+            "GlobalOptionSet@odata.bind": "/GlobalOptionSetDefinitions(" + global_option_id + ")",
             "Description": {
                 "@odata.type": "Microsoft.Dynamics.CRM.Label",
                 "LocalizedLabels": [
@@ -68,14 +63,14 @@ class PowerAppEntity:
                 "LocalizedLabels": [
                 {
                     "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                    "Label": "Sample Choice 3.0",
+                    "Label": label_name,
                     "LanguageCode": 1033,
                     "IsManaged": False
                 }
                 ],
                 "UserLocalizedLabel": {
                 "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
-                "Label": "Sample Choice 3.0",
+                "Label": label_name,
                 "LanguageCode": 1033,
                 "IsManaged": False
                 }
@@ -85,9 +80,16 @@ class PowerAppEntity:
                 "CanBeChanged": False,
                 "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
             },
-            "SchemaName": "mow_SampleChoice3"
+            "SchemaName": "mow_" + schema_name
         }
 
+
+    def acquire_token(self):
+        # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
+        # a token from cache, and fall back to acquire a fresh token when needed.
+        token = self.global_app.acquire_token_for_client(scopes=config["scope"])
+
+        
         # Json model of headers needed to post to projects table in Sandbox_Mowery
         post_headers = headers = {
             'MSCRM.SolutionName': 'MoweryCRM',
