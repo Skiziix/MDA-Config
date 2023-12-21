@@ -16,7 +16,7 @@ config = json.load(open(sys.argv[1]))
 
 class PowerAppEntity:
 
-    def __init__(self, config):
+    def __init__(self, config, solution_name):
 
         # If for whatever reason you plan to recreate same ClientApplication periodically,
         # you shall create one global token cache and reuse it by each ClientApplication
@@ -32,8 +32,10 @@ class PowerAppEntity:
             )
         
         self.config = config
+        self.solution_name = solution_name
 
     def post_global_choice_attribute(self, schema_name, label_name, global_option_id):
+
         # Json model of attribute to be created
         picklist_global_choice = {
             "@odata.type": "Microsoft.Dynamics.CRM.PicklistAttributeMetadata",
@@ -84,18 +86,23 @@ class PowerAppEntity:
             },
             "SchemaName": "mow_" + schema_name
         }
+        
 
-
+        self.post_attirbute(picklist_global_choice)
 
     def acquire_token(self):
         # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
         # a token from cache, and fall back to acquire a fresh token when needed.
-        token = self.global_app.acquire_token_for_client(scopes=config["scope"])
-
+        token = self.global_app.acquire_token_for_client(scopes=self.config["scope"])        
         
-        # Json model of headers needed to post to projects table in Sandbox_Mowery
-        post_headers = headers = {
-            'MSCRM.SolutionName': 'MoweryCRM',
+        return token
+
+    def post_attirbute(self, post_body):
+
+        token = self.acquire_token()
+
+        post_headers = {
+            'MSCRM.SolutionName': self.solution_name,
             'OData-MaxVersion': '4.0',
             'OData-Version': '4.0',
             'If-None-Match': 'null',
@@ -103,33 +110,30 @@ class PowerAppEntity:
             'Content-Type': 'application/json; charset=utf-8',
             'Authorization': 'Bearer ' + token['access_token'],
         }
-        
-        return token
-
-    def post_attirbute(self, token, post_headers, post_body):
 
         # Existent token
         if "access_token" in token:
             print("Token was obtained from:", token["token_source"])  # Since MSAL 1.25
-            # Calling graph using the access token
-            response = requests.post(  # Use token to call downstream service
+
+            # Posting attribute to table
+            response = requests.post(
                 config["endpoint"],
                 headers=post_headers, json=post_body)
             
-            #json_response = response.json()
-            
+            # Successful POST
             if response.status_code == 200:
                 print("Success!")
                 print(response.headers)
-                #print("Graph API call token: %s" % json.dumps(json_response, indent=2))
 
+            # Unauthorized to POST
             elif response.status_code == 401:
                 print("Unauthorized.")
 
+            # Other Error
             else:
                 print(response.content)
 
-            
+        # Unable to acquire token            
         else:
-            print("Token acquisition failed")  # Examine token["error_description"] etc. to diagnose error
+            print(f'Token acquisition failed:\n\t{token["error_description"]}')  # Examine token["error_description"] etc. to diagnose error
 
