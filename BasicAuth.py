@@ -117,7 +117,7 @@ class PowerAppEntity:
 
             # Posting attribute to table
             response = requests.post(
-                config["endpoint"],
+                self.config["endpoint"],
                 headers=post_headers, json=post_body)
             
             # Successful POST
