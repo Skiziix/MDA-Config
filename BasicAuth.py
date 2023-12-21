@@ -94,6 +94,8 @@ def acquire_token():
         'Authorization': 'Bearer ' + token['access_token'],
     }
     
+    return token
+
 def post_attirbute(token, post_headers, post_body):
 
     # Existent token
