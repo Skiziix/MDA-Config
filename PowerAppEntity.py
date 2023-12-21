@@ -90,6 +90,48 @@ class PowerAppEntity:
 
         self.post_attirbute(picklist_global_choice)
 
+    def post_text_attribute(self, schema_name, label_name, global_option_id):
+
+        body = {  
+            "AttributeType": "String",  
+            "AttributeTypeName": {  
+            "Value": "StringType"  
+            },  
+            "Description": {  
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+            "LocalizedLabels": [  
+            {  
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+                "Label": "Text field",  
+                "LanguageCode": 1033  
+            }  
+            ]  
+            },  
+            "DisplayName": {  
+            "@odata.type": "Microsoft.Dynamics.CRM.Label",  
+            "LocalizedLabels": [  
+            {  
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",  
+                "Label": label_name,  
+                "LanguageCode": 1033  
+            }  
+            ]  
+            },  
+            "RequiredLevel": {  
+            "Value": "None",  
+            "CanBeChanged": True,  
+            "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"  
+            },  
+            "SchemaName": schema_name,  
+            "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",  
+            "FormatName": {  
+            "Value": "Text"  
+            },   
+        }  
+
+        self.post_attirbute(body)
+
+
     def acquire_token(self):
         # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
         # a token from cache, and fall back to acquire a fresh token when needed.
