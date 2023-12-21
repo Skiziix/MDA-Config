@@ -25,8 +25,8 @@ class PowerAppEntity:
 
         # Create a preferably long-lived app instance, to avoid the overhead of app creation
         self.global_app = msal.ConfidentialClientApplication(
-            config["client_id"], authority=config["authority"],
-            client_credential=config["secret"],
+            self.config["client_id"], authority=self.config["authority"],
+            client_credential=self.config["secret"],
             token_cache=global_token_cache,  # Let this app (re)use an existing token cache.
                 # If absent, ClientApplication will create its own empty token cache
             )
