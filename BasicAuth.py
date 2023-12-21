@@ -30,6 +30,8 @@ class PowerAppEntity:
             token_cache=global_token_cache,  # Let this app (re)use an existing token cache.
                 # If absent, ClientApplication will create its own empty token cache
             )
+        
+        self.config = config
 
     def post_global_choice_attribute(self, schema_name, label_name, global_option_id):
         # Json model of attribute to be created
@@ -82,6 +84,7 @@ class PowerAppEntity:
             },
             "SchemaName": "mow_" + schema_name
         }
+
 
 
     def acquire_token(self):
