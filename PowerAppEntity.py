@@ -227,7 +227,7 @@ class PowerAppEntity:
                 headers=post_headers, json=post_body)
             
             # Successful POST
-            if response.status_code == 201:
+            if response.status_code == 204:
                 print("Success!")
                 print(response.headers)
 
