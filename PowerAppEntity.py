@@ -15,8 +15,9 @@ import msal
 
 
 class PowerAppEntity:
-
     def __init__(self, config, solution_name):
+
+        self.config = config
 
         # If for whatever reason you plan to recreate same ClientApplication periodically,
         # you shall create one global token cache and reuse it by each ClientApplication
@@ -31,7 +32,7 @@ class PowerAppEntity:
                 # If absent, ClientApplication will create its own empty token cache
             )
         
-        self.config = config
+        
         self.solution_name = solution_name
 
     def post_global_choice_attribute(self, schema_name, label_name, global_option_id):
@@ -122,11 +123,12 @@ class PowerAppEntity:
             "CanBeChanged": True,  
             "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"  
             },  
-            "SchemaName": schema_name,  
+            "SchemaName": "mow_" + schema_name,  
             "@odata.type": "Microsoft.Dynamics.CRM.StringAttributeMetadata",  
             "FormatName": {  
             "Value": "Text"  
-            },   
+            },
+            "MaxLength": 1000   
         }  
 
         self.post_attirbute(body)
