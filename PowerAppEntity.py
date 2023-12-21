@@ -89,7 +89,7 @@ class PowerAppEntity:
         }
         
 
-        self.post_attirbute(body)
+        self.__post_attirbute(body)
 
     def post_text_attribute(self, schema_name, label_name):
 
@@ -131,7 +131,7 @@ class PowerAppEntity:
             "MaxLength": 1000   
         }  
 
-        self.post_attirbute(body)
+        self.__post_attirbute(body)
 
     def post_memo_attribute(self, schema_name, label_name):
 
@@ -187,18 +187,25 @@ class PowerAppEntity:
             "SchemaName": "mow_" + schema_name
         }
 
-        self.post_attirbute(body)
+        self.__post_attirbute(body)
+
+
+    ##################
+    ## Helper Funcs ##
+    ##################
         
-    def acquire_token(self):
+    # Acquires a token for authentication
+    def __acquire_token(self):
         # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
         # a token from cache, and fall back to acquire a fresh token when needed.
         token = self.global_app.acquire_token_for_client(scopes=self.config["scope"])        
         
         return token
 
-    def post_attirbute(self, post_body):
+    # Posts to PowerApps
+    def __post_attirbute(self, post_body):
 
-        token = self.acquire_token()
+        token = self.__acquire_token()
 
         post_headers = {
             'MSCRM.SolutionName': self.solution_name,
