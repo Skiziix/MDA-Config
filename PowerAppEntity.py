@@ -90,7 +90,7 @@ class PowerAppEntity:
 
         self.post_attirbute(body)
 
-    def post_text_attribute(self, schema_name, label_name, global_option_id):
+    def post_text_attribute(self, schema_name, label_name):
 
         body = {  
             "AttributeType": "String",  
