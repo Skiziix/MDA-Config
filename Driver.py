@@ -26,4 +26,4 @@ for attribute in attributes:
 
     # If the attribute is of type text post a memo attribute
     elif attributes[attribute]["type"] == "text":
-        table.post_memo_attribute(attribute, attributes[attribute])
+        table.post_memo_attribute(attribute, attributes[attribute]["label"])
