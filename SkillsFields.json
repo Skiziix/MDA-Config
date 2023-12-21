@@ -1,0 +1,906 @@
+{
+    "ArchitecturalDrawings": {
+        "type": "choice",
+        "label": "Read and understand Architectural drawings"
+    },
+    "ArchitecturalDrawingsComment": {
+        "type": "text",
+        "label": "Read and understand Architectural drawings comments"
+    },
+    "CivilDrawings": {
+        "type": "choice",
+        "label": "Read and understand Civil drawings"
+    },
+    "CivilDrawingsComment": {
+        "type": "text",
+        "label": "Read and understand Civil drawings comments"
+    },
+    "MEPDrawings": {
+        "type": "choice",
+        "label": "Read and understand MEP drawings"
+    },
+    "MEPDrawingsComment": {
+        "type": "text",
+        "label": "Read and understand MEP drawings comments"
+    },
+    "Pa1Call": {
+        "type": "choice",
+        "label": "Understands Pa. 1-Call"
+    },
+    "Pa1CallComment": {
+        "type": "text",
+        "label": "Understands Pa. 1-Call comments"
+    },
+    "TransitBuildlevelLaser": {
+        "type": "choice",
+        "label": "Can set up and operate Transit, Builders level, Laser"
+    },
+    "TransitBuildlevelLaserComment": {
+        "type": "text",
+        "label": "Can set up and operate Transit, Builders level, Laser comments"
+    },
+    "SiteLayout": {
+        "type": "choice",
+        "label": "Can do building site layout"
+    },
+    "SiteLayoutComment": {
+        "type": "text",
+        "label": "Can do building site layout comments"
+    },
+    "SkidSteer": {
+        "type": "choice",
+        "label": "Operate skid steer "
+    },
+    "SkidSteerComment": {
+        "type": "text",
+        "label": "Operate skid steer  comments"
+    },
+    "MiniExcavator": {
+        "type": "choice",
+        "label": "Operate mini excavator"
+    },
+    "MiniExcavatorComment": {
+        "type": "text",
+        "label": "Operate mini excavator comments"
+    },
+    "VibratingPlateTamper": {
+        "type": "choice",
+        "label": "Operate vibrating plate tamper"
+    },
+    "VibratingPlateTamperComment": {
+        "type": "text",
+        "label": "Operate vibrating plate tamper comments"
+    },
+    "JumpingJackTamper": {
+        "type": "choice",
+        "label": "Operate jumping jack tamper"
+    },
+    "JumpingJackTamperComment": {
+        "type": "text",
+        "label": "Operate jumping jack tamper comments"
+    },
+    "ManualTruck": {
+        "type": "choice",
+        "label": "Drive manual transmission truck / small dump truck"
+    },
+    "ManualTruckComment": {
+        "type": "text",
+        "label": "Drive manual transmission truck / small dump truck comments"
+    },
+    "StormWaterPiping": {
+        "type": "choice",
+        "label": "Storm water piping"
+    },
+    "StormWaterPipingComment": {
+        "type": "text",
+        "label": "Storm water piping comments"
+    },
+    "SanitaryPiping": {
+        "type": "choice",
+        "label": "Sanitary piping"
+    },
+    "SanitaryPipingComment": {
+        "type": "text",
+        "label": "Sanitary piping comments"
+    },
+    "DomesticWater": {
+        "type": "choice",
+        "label": "Domestic water"
+    },
+    "DomesticWaterComment": {
+        "type": "text",
+        "label": "Domestic water comments"
+    },
+    "FloorPatch": {
+        "type": "choice",
+        "label": "Concrete floor patch"
+    },
+    "FloorPatchComment": {
+        "type": "text",
+        "label": "Concrete floor patch comments"
+    },
+    "FloorGrinder": {
+        "type": "choice",
+        "label": "Operate concrete floor grinder"
+    },
+    "FloorGrinderComment": {
+        "type": "text",
+        "label": "Operate concrete floor grinder comments"
+    },
+    "CuttingAndGrinding": {
+        "type": "choice",
+        "label": "Concrete cutting and grinding"
+    },
+    "CuttingAndGrindingComment": {
+        "type": "text",
+        "label": "Concrete cutting and grinding comments"
+    },
+    "ImbedCast": {
+        "type": "choice",
+        "label": "Cast in concrete imbeds"
+    },
+    "ImbedCastComment": {
+        "type": "text",
+        "label": "Cast in concrete imbeds comments"
+    },
+    "ConstructCurb": {
+        "type": "choice",
+        "label": "Form, pour, strip, and rub curbs"
+    },
+    "ConstructCurbComment": {
+        "type": "text",
+        "label": "Form, pour, strip, and rub curbs comments"
+    },
+    "FlatWork": {
+        "type": "choice",
+        "label": "Form, place, and finish concrete flat work"
+    },
+    "FlatWorkComment": {
+        "type": "text",
+        "label": "Form, place, and finish concrete flat work comments"
+    },
+    "ConcreteAnchorBolt": {
+        "type": "choice",
+        "label": "Set anchor bolts"
+    },
+    "ConcreteAnchorBoltComment": {
+        "type": "text",
+        "label": "Set anchor bolts comments"
+    },
+    "HandFinishConcrete": {
+        "type": "choice",
+        "label": "Hand finish concrete (broom, float, edge, and hard trowel)"
+    },
+    "HandFinishConcreteComment": {
+        "type": "text",
+        "label": "Hand finish concrete (broom, float, edge, and hard trowel) comments"
+    },
+    "Sidewalk": {
+        "type": "choice",
+        "label": "Form, place, and finish concrete sidewalk"
+    },
+    "SidewalkComment": {
+        "type": "text",
+        "label": "Form, place, and finish concrete sidewalk comments"
+    },
+    "Steps": {
+        "type": "choice",
+        "label": "Form, pour, and place concrete steps"
+    },
+    "StepsComment": {
+        "type": "text",
+        "label": "Form, pour, and place concrete steps comments"
+    },
+    "Ramps": {
+        "type": "choice",
+        "label": "Form, pour, and place concrete ramps"
+    },
+    "RampsComment": {
+        "type": "text",
+        "label": "Form, pour, and place concrete ramps comments"
+    },
+    "Walls": {
+        "type": "choice",
+        "label": "Form, pour, and place concrete walls"
+    },
+    "WallsComment": {
+        "type": "text",
+        "label": "Form, pour, and place concrete walls comments"
+    },
+    "Piers": {
+        "type": "choice",
+        "label": "Form, pour, and place footers and piers"
+    },
+    "PiersComment": {
+        "type": "text",
+        "label": "Form, pour, and place footers and piers comments"
+    },
+    "Rebar": {
+        "type": "choice",
+        "label": "Place and tie rebar"
+    },
+    "RebarComment": {
+        "type": "text",
+        "label": "Place and tie rebar comments"
+    },
+    "ConcreteBollard": {
+        "type": "choice",
+        "label": "Install cast in place bollards"
+    },
+    "ConcreteBollardComment": {
+        "type": "text",
+        "label": "Install cast in place bollards comments"
+    },
+    "GeorgiaBuggy": {
+        "type": "choice",
+        "label": "Operate a concrete buggy / Georgia buggy"
+    },
+    "GeorgiaBuggyComment": {
+        "type": "text",
+        "label": "Operate a concrete buggy / Georgia buggy comments"
+    },
+    "WalkPowerTrowel": {
+        "type": "choice",
+        "label": "Operate a walk behind concrete power trowel"
+    },
+    "WalkPowerTrowelComment": {
+        "type": "text",
+        "label": "Operate a walk behind concrete power trowel comments"
+    },
+    "RidePowerTrowel": {
+        "type": "choice",
+        "label": "Operate a ride on concrete power trowel"
+    },
+    "RidePowerTrowelComment": {
+        "type": "text",
+        "label": "Operate a ride on concrete power trowel comments"
+    },
+    "HandScreed": {
+        "type": "choice",
+        "label": "Hand screed"
+    },
+    "HandScreedComment": {
+        "type": "text",
+        "label": "Hand screed comments"
+    },
+    "VibraScreed": {
+        "type": "choice",
+        "label": "Operate vibra screed"
+    },
+    "VibraScreedComment": {
+        "type": "text",
+        "label": "Operate vibra screed comments"
+    },
+    "VaporBarrier": {
+        "type": "choice",
+        "label": "Concrete vapor barrier"
+    },
+    "VaporBarrierComment": {
+        "type": "text",
+        "label": "Concrete vapor barrier comments"
+    },
+    "ConcreteVibrator": {
+        "type": "choice",
+        "label": "Operate concrete vibrator"
+    },
+    "ConcreteVibratorComment": {
+        "type": "text",
+        "label": "Operate concrete vibrator comments"
+    },
+    "CmuBrickStone": {
+        "type": "choice",
+        "label": "Lay cmu, brick, and stone (closing window or door size openings)"
+    },
+    "CmuBrickStoneComment": {
+        "type": "text",
+        "label": "Lay cmu, brick, and stone (closing window or door size openings) comments"
+    },
+    "GroutFill": {
+        "type": "choice",
+        "label": "Grout fill walls"
+    },
+    "GroutFillComment": {
+        "type": "text",
+        "label": "Grout fill walls comments"
+    },
+    "MortarMixer": {
+        "type": "choice",
+        "label": "Operate mortar mixer"
+    },
+    "MortarMixerComment": {
+        "type": "text",
+        "label": "Operate mortar mixer comments"
+    },
+    "RepointStrikeJoint": {
+        "type": "choice",
+        "label": "Repoint and strike joints"
+    },
+    "RepointStrikeJointComment": {
+        "type": "text",
+        "label": "Repoint and strike joints comments"
+    },
+    "MasonryDemoSaw": {
+        "type": "choice",
+        "label": "Use masonry saw / Demo saw"
+    },
+    "MasonryDemoSawComment": {
+        "type": "text",
+        "label": "Use masonry saw / Demo saw comments"
+    },
+    "FrameScaffolding": {
+        "type": "choice",
+        "label": "Set up and use frame scaffolding"
+    },
+    "FrameScaffoldingComment": {
+        "type": "text",
+        "label": "Set up and use frame scaffolding comments"
+    },
+    "BakerScaffold": {
+        "type": "choice",
+        "label": "Set up and use baker scaffold"
+    },
+    "BakerScaffoldComment": {
+        "type": "text",
+        "label": "Set up and use baker scaffold comments"
+    },
+    "ExtensionLadder": {
+        "type": "choice",
+        "label": "Set up and use extension ladder"
+    },
+    "ExtensionLadderComment": {
+        "type": "text",
+        "label": "Set up and use extension ladder comments"
+    },
+    "StepLadder": {
+        "type": "choice",
+        "label": "Set up and use step ladder"
+    },
+    "StepLadderComment": {
+        "type": "text",
+        "label": "Set up and use step ladder comments"
+    },
+    "AllTerrainLift": {
+        "type": "choice",
+        "label": "Operate all terrain fork lift (petti-bone / Lull)"
+    },
+    "AllTerrainLiftComment": {
+        "type": "text",
+        "label": "Operate all terrain fork lift (petti-bone / Lull) comments"
+    },
+    "SteelLintels": {
+        "type": "choice",
+        "label": "Set misc. steel lintels"
+    },
+    "SteelLintelsComment": {
+        "type": "text",
+        "label": "Set misc. steel lintels comments"
+    },
+    "InstallImbed": {
+        "type": "choice",
+        "label": "Install imbeds"
+    },
+    "InstallImbedComment": {
+        "type": "text",
+        "label": "Install imbeds comments"
+    },
+    "MasonryAnchorBolt": {
+        "type": "choice",
+        "label": "Set anchor bolts"
+    },
+    "MasonryAnchorBoltComment": {
+        "type": "text",
+        "label": "Set anchor bolts comments"
+    },
+    "StudFraming": {
+        "type": "choice",
+        "label": "Metal stud framing"
+    },
+    "StudFramingComment": {
+        "type": "text",
+        "label": "Metal stud framing comments"
+    },
+    "Handrail": {
+        "type": "choice",
+        "label": "Metal handrail"
+    },
+    "HandrailComment": {
+        "type": "text",
+        "label": "Metal handrail comments"
+    },
+    "MetalAnchorBolt": {
+        "type": "choice",
+        "label": "Set anchor bolt/grout leveling plates"
+    },
+    "MetalAnchorBoltComment": {
+        "type": "text",
+        "label": "Set anchor bolt/grout leveling plates comments"
+    },
+    "StructuralSteel": {
+        "type": "choice",
+        "label": "Rig and set structural steel columns, joist, decking"
+    },
+    "StructuralSteelComment": {
+        "type": "text",
+        "label": "Rig and set structural steel columns, joist, decking comments"
+    },
+    "NonStructuralWeld": {
+        "type": "choice",
+        "label": "Misc. non structural welding (stick / Mig)"
+    },
+    "NonStructuralWeldComment": {
+        "type": "text",
+        "label": "Misc. non structural welding (stick / Mig) comments"
+    },
+    "AcetyleneTorch": {
+        "type": "choice",
+        "label": "Operate acetylene torch"
+    },
+    "AcetyleneTorchComment": {
+        "type": "text",
+        "label": "Operate acetylene torch comments"
+    },
+    "MetalBollard": {
+        "type": "choice",
+        "label": "Install bolt down bollards"
+    },
+    "MetalBollardComment": {
+        "type": "text",
+        "label": "Install bolt down bollards comments"
+    },
+    "BoomLift": {
+        "type": "choice",
+        "label": "Operate and work out of a boom lift"
+    },
+    "BoomLiftComment": {
+        "type": "text",
+        "label": "Operate and work out of a boom lift comments"
+    },
+    "ScissorLift": {
+        "type": "choice",
+        "label": "Operate and work out of a scissors lift"
+    },
+    "ScissorLiftComment": {
+        "type": "text",
+        "label": "Operate and work out of a scissors lift comments"
+    },
+    "LayoutWallJoistTruss": {
+        "type": "choice",
+        "label": "Layout of walls, joists, and trusses 16” & 24” O/C"
+    },
+    "LayoutWallJoistTrussComment": {
+        "type": "text",
+        "label": "Layout of walls, joists, and trusses 16” & 24” O/C comments"
+    },
+    "PowerToolMeasureCut": {
+        "type": "choice",
+        "label": "Measure and cut materials with power tools safely"
+    },
+    "PowerToolMeasureCutComment": {
+        "type": "text",
+        "label": "Measure and cut materials with power tools safely comments"
+    },
+    "WoodFraming": {
+        "type": "choice",
+        "label": "Wood framing"
+    },
+    "WoodFramingComment": {
+        "type": "text",
+        "label": "Wood framing comments"
+    },
+    "WoodTruss": {
+        "type": "choice",
+        "label": "Set wood trusses  (Roof and Floor)"
+    },
+    "WoodTrussComment": {
+        "type": "text",
+        "label": "Set wood trusses  (Roof and Floor) comments"
+    },
+    "TimberFraming": {
+        "type": "choice",
+        "label": "Timber framing"
+    },
+    "TimberFramingComment": {
+        "type": "text",
+        "label": "Timber framing comments"
+    },
+    "RafterCut": {
+        "type": "choice",
+        "label": "Rafter cuts - hips and valleys"
+    },
+    "RafterCutComment": {
+        "type": "text",
+        "label": "Rafter cuts - hips and valleys comments"
+    },
+    "Drywall": {
+        "type": "choice",
+        "label": "Hanging drywall"
+    },
+    "DrywallComment": {
+        "type": "text",
+        "label": "Hanging drywall comments"
+    },
+    "WoodTrim": {
+        "type": "choice",
+        "label": "Wood trim (base, chair rail, casing, crown)"
+    },
+    "WoodTrimComment": {
+        "type": "text",
+        "label": "Wood trim (base, chair rail, casing, crown) comments"
+    },
+    "CaseWorkInstall": {
+        "type": "choice",
+        "label": "Case work installation"
+    },
+    "CaseWorkInstallComment": {
+        "type": "text",
+        "label": "Case work installation comments"
+    },
+    "CountertopInstall": {
+        "type": "choice",
+        "label": "Countertop installation"
+    },
+    "CountertopInstallComment": {
+        "type": "text",
+        "label": "Countertop installation comments"
+    },
+    "PlasticInstall": {
+        "type": "choice",
+        "label": "Plastic laminate cut, glue, and install"
+    },
+    "PlasticInstallComment": {
+        "type": "text",
+        "label": "Plastic laminate cut, glue, and install comments"
+    },
+    "HandrailBalusterInstall": {
+        "type": "choice",
+        "label": "Handrail and baluster installation"
+    },
+    "HandrailBalusterInstallComment": {
+        "type": "text",
+        "label": "Handrail and baluster installation comments"
+    },
+    "WoodStairStringer": {
+        "type": "choice",
+        "label": "Layout, cut, and install wood stair stringers"
+    },
+    "WoodStairStringerComment": {
+        "type": "text",
+        "label": "Layout, cut, and install wood stair stringers comments"
+    },
+    "WoodSheetingInstall": {
+        "type": "choice",
+        "label": "Wood sheeting installation (roof, wall, floor)"
+    },
+    "WoodSheetingInstallComment": {
+        "type": "text",
+        "label": "Wood sheeting installation (roof, wall, floor) comments"
+    },
+    "RoofCurbBlocking": {
+        "type": "choice",
+        "label": "Roof curb blocking"
+    },
+    "RoofCurbBlockingComment": {
+        "type": "text",
+        "label": "Roof curb blocking comments"
+    },
+    "WoodHandrailInstall": {
+        "type": "choice",
+        "label": "Install wood handrails"
+    },
+    "WoodHandrailInstallComment": {
+        "type": "text",
+        "label": "Install wood handrails comments"
+    },
+    "BuildInstallTempBarriers": {
+        "type": "choice",
+        "label": "Build and install temporary barriers"
+    },
+    "BuildInstallTempBarriersComment": {
+        "type": "text",
+        "label": "Build and install temporary barriers comments"
+    },
+    "WaterProofing": {
+        "type": "choice",
+        "label": "Vapor barrier / water proofing"
+    },
+    "WaterProofingComment": {
+        "type": "text",
+        "label": "Vapor barrier / water proofing comments"
+    },
+    "ShingleRoofingTrim": {
+        "type": "choice",
+        "label": "Shingle roofing and trim"
+    },
+    "ShingleRoofingTrimComment": {
+        "type": "text",
+        "label": "Shingle roofing and trim comments"
+    },
+    "RubberRoofingTrim": {
+        "type": "choice",
+        "label": "Rubber roofing and trim"
+    },
+    "RubberRoofingTrimComment": {
+        "type": "text",
+        "label": "Rubber roofing and trim comments"
+    },
+    "MetalRoofingTrim": {
+        "type": "choice",
+        "label": "Metal roofing and trim"
+    },
+    "MetalRoofingTrimComment": {
+        "type": "text",
+        "label": "Metal roofing and trim comments"
+    },
+    "WoodSidingTrim": {
+        "type": "choice",
+        "label": "Wood siding and trim"
+    },
+    "WoodSidingTrimComment": {
+        "type": "text",
+        "label": "Wood siding and trim comments"
+    },
+    "VinylSidingTrim": {
+        "type": "choice",
+        "label": "Vinyl siding and trim"
+    },
+    "VinylSidingTrimComment": {
+        "type": "text",
+        "label": "Vinyl siding and trim comments"
+    },
+    "Soffit": {
+        "type": "choice",
+        "label": "Soffit - wood, vinyl, and metal"
+    },
+    "SoffitComment": {
+        "type": "text",
+        "label": "Soffit - wood, vinyl, and metal comments"
+    },
+    "MetalSidingTrim": {
+        "type": "choice",
+        "label": "Metal siding and trim"
+    },
+    "MetalSidingTrimComment": {
+        "type": "text",
+        "label": "Metal siding and trim comments"
+    },
+    "HardieBoardSidingTrim": {
+        "type": "choice",
+        "label": "Hardie board siding and trim"
+    },
+    "HardieBoardSidingTrimComment": {
+        "type": "text",
+        "label": "Hardie board siding and trim comments"
+    },
+    "RigidInstallationInstall": {
+        "type": "choice",
+        "label": "Install rigid insulation (foundations)"
+    },
+    "RigidInstallationInstallComment": {
+        "type": "text",
+        "label": "Install rigid insulation (foundations) comments"
+    },
+    "BattInsulationInstall": {
+        "type": "choice",
+        "label": "Install batt insulation (walls, floors, attic)"
+    },
+    "BattInsulationInstallComment": {
+        "type": "text",
+        "label": "Install batt insulation (walls, floors, attic) comments"
+    },
+    "EIFSRepairInstall": {
+        "type": "choice",
+        "label": "EIFS repair install"
+    },
+    "EIFSRepairInstallComment": {
+        "type": "text",
+        "label": "EIFS repair install comments"
+    },
+    "GutterDownSpoutInstall": {
+        "type": "choice",
+        "label": "Install gutter and down spout"
+    },
+    "GutterDownSpoutInstallComment": {
+        "type": "text",
+        "label": "Install gutter and down spout comments"
+    },
+    "CaulkingToolingFinish": {
+        "type": "choice",
+        "label": "Finish caulking and tooling"
+    },
+    "CaulkingToolingFinishComment": {
+        "type": "text",
+        "label": "Finish caulking and tooling comments"
+    },
+    "FireCaulking": {
+        "type": "choice",
+        "label": "Fire caulking"
+    },
+    "FireCaulkingComment": {
+        "type": "text",
+        "label": "Fire caulking comments"
+    },
+    "PrehungWoodDoorInstall": {
+        "type": "choice",
+        "label": "Pre-hung wood door installation"
+    },
+    "PrehungWoodDoorInstallComment": {
+        "type": "text",
+        "label": "Pre-hung wood door installation comments"
+    },
+    "HollowMetalDoorFrameInstall": {
+        "type": "choice",
+        "label": "Hollow metal door frame installation"
+    },
+    "HollowMetalDoorFrameInstallComment": {
+        "type": "text",
+        "label": "Hollow metal door frame installation comments"
+    },
+    "HollowMetalDoorInstall": {
+        "type": "choice",
+        "label": "Hollow metal door installation"
+    },
+    "HollowMetalDoorInstallComment": {
+        "type": "text",
+        "label": "Hollow metal door installation comments"
+    },
+    "WoodDoorInstall": {
+        "type": "choice",
+        "label": "Wood door installation"
+    },
+    "WoodDoorInstallComment": {
+        "type": "text",
+        "label": "Wood door installation comments"
+    },
+    "DoorHardware": {
+        "type": "choice",
+        "label": "Door hardware"
+    },
+    "DoorHardwareComment": {
+        "type": "text",
+        "label": "Door hardware comments"
+    },
+    "WindowInstall": {
+        "type": "choice",
+        "label": "Window installation (Dbl & Sgl Hung, Casmt, Stationary, HMF"
+    },
+    "WindowInstallComment": {
+        "type": "text",
+        "label": "Window installation (Dbl & Sgl Hung, Casmt, Stationary, HMF comments"
+    },
+    "VCTInstall": {
+        "type": "choice",
+        "label": "VCT installation"
+    },
+    "VCTInstallComment": {
+        "type": "text",
+        "label": "VCT installation comments"
+    },
+    "VinylCoveBaseInstall": {
+        "type": "choice",
+        "label": "Vinyl cove base installation"
+    },
+    "VinylCoveBaseInstallComment": {
+        "type": "text",
+        "label": "Vinyl cove base installation comments"
+    },
+    "LVPInstall": {
+        "type": "choice",
+        "label": "LVP installation"
+    },
+    "LVPInstallComment": {
+        "type": "text",
+        "label": "LVP installation comments"
+    },
+    "SheetVinylInstall": {
+        "type": "choice",
+        "label": "Sheet vinyl installation"
+    },
+    "SheetVinylInstallComment": {
+        "type": "text",
+        "label": "Sheet vinyl installation comments"
+    },
+    "FinishingDrywall": {
+        "type": "choice",
+        "label": "Finishing drywall  (level 4)"
+    },
+    "FinishingDrywallComment": {
+        "type": "text",
+        "label": "Finishing drywall  (level 4) comments"
+    },
+    "ChicagoGrid": {
+        "type": "choice",
+        "label": "Chicago grid"
+    },
+    "ChicagoGridComment": {
+        "type": "text",
+        "label": "Chicago grid comments"
+    },
+    "SuspendedCeilingGridInstallAndLayout": {
+        "type": "choice",
+        "label": "Suspended ceiling grid installation and layout"
+    },
+    "SuspendedCeilingGridInstallAndLayoutComment": {
+        "type": "text",
+        "label": "Suspended ceiling grid installation and layout comments"
+    },
+    "CeilingTileCutInstall": {
+        "type": "choice",
+        "label": "Ceiling tile cut and installation"
+    },
+    "CeilingTileCutInstallComment": {
+        "type": "text",
+        "label": "Ceiling tile cut and installation comments"
+    },
+    "PaintingInteriorExterior": {
+        "type": "choice",
+        "label": "Painting interior / exterior"
+    },
+    "PaintingInteriorExteriorComment": {
+        "type": "text",
+        "label": "Painting interior / exterior comments"
+    },
+    "CeramicTileInstallAndGrout": {
+        "type": "choice",
+        "label": "Ceramic tile installation and grouting"
+    },
+    "CeramicTileInstallAndGroutComment": {
+        "type": "text",
+        "label": "Ceramic tile installation and grouting comments"
+    },
+    "FRPTrimInstall": {
+        "type": "choice",
+        "label": "Installation for FRP and trim"
+    },
+    "FRPTrimInstallComment": {
+        "type": "text",
+        "label": "Installation for FRP and trim comments"
+    },
+    "WallpaperCovering": {
+        "type": "choice",
+        "label": "Wall paper covering"
+    },
+    "WallpaperCoveringComment": {
+        "type": "text",
+        "label": "Wall paper covering comments"
+    },
+    "ToiletPartitions": {
+        "type": "choice",
+        "label": "Toilet partitions"
+    },
+    "ToiletPartitionsComment": {
+        "type": "text",
+        "label": "Toilet partitions comments"
+    },
+    "BathroomAccessories": {
+        "type": "choice",
+        "label": "Bathroom accessories  (mirrors, paper holders, grab bars, dispensers…)"
+    },
+    "BathroomAccessoriesComment": {
+        "type": "text",
+        "label": "Bathroom accessories  (mirrors, paper holders, grab bars, dispensers…) comments"
+    },
+    "AppliancesInstall": {
+        "type": "choice",
+        "label": "Install and set appliances (no connections)"
+    },
+    "AppliancesInstallComment": {
+        "type": "text",
+        "label": "Install and set appliances (no connections) comments"
+    },
+    "FireExtinguishersCabinetsInstall": {
+        "type": "choice",
+        "label": "Install fire extinguishers and cabinets"
+    },
+    "FireExtinguishersCabinetsInstallComment": {
+        "type": "text",
+        "label": "Install fire extinguishers and cabinets comments"
+    },
+    "FencingInstall": {
+        "type": "choice",
+        "label": "Install fencing (chainlink, vinyl, wood, aluminum)"
+    },
+    "FencingInstallComment": {
+        "type": "text",
+        "label": "Install fencing (chainlink, vinyl, wood, aluminum) comments"
+    }
+}
