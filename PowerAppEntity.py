@@ -133,7 +133,62 @@ class PowerAppEntity:
 
         self.post_attirbute(body)
 
+    def post_memo_attribute(self, schema_name, label_name):
 
+        body = {
+            "@odata.type": "Microsoft.Dynamics.CRM.MemoAttributeMetadata",
+            "AttributeType": "Memo",
+            "AttributeTypeName": {
+                "Value": "MemoType"
+            },
+            "Format": "TextArea",
+            "ImeMode": "Disabled",
+            "MaxLength": 500,
+            "IsLocalizable": False,
+            "Description": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": label_name,
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                ],
+                "UserLocalizedLabel": {
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                "Label": label_name,
+                "LanguageCode": 1033,
+                "IsManaged": False
+                }
+            },
+            "DisplayName": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": label_name,
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                ],
+                "UserLocalizedLabel": {
+                "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                "Label": label_name,
+                "LanguageCode": 1033,
+                "IsManaged": False
+                }
+            },
+            "RequiredLevel": {
+                "Value": "None",
+                "CanBeChanged": False,
+                "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "SchemaName": "mow_" + schema_name
+        }
+
+        self.post_attirbute(body)
+        
     def acquire_token(self):
         # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
         # a token from cache, and fall back to acquire a fresh token when needed.
