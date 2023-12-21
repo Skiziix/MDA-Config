@@ -11,7 +11,7 @@ import msal
 # logging.basicConfig(level=logging.DEBUG)  # Enable DEBUG log for entire script
 # logging.getLogger("msal").setLevel(logging.INFO)  # Optionally disable MSAL DEBUG logs
 
-config = json.load(open(sys.argv[1]))
+#config = json.load(open(sys.argv[1]))
 
 
 class PowerAppEntity:
