@@ -27,7 +27,7 @@ global_app = msal.ConfidentialClientApplication(
     )
 
 
-def acquire_and_use_token():
+def acquire_token():
     # Since MSAL 1.23, acquire_token_for_client(...) will automatically look up
     # a token from cache, and fall back to acquire a fresh token when needed.
     token = global_app.acquire_token_for_client(scopes=config["scope"])
@@ -94,13 +94,15 @@ def acquire_and_use_token():
         'Authorization': 'Bearer ' + token['access_token'],
     }
     
+def post_attirbute(token, post_headers, post_body):
+
     # Existent token
     if "access_token" in token:
         print("Token was obtained from:", token["token_source"])  # Since MSAL 1.25
         # Calling graph using the access token
         response = requests.post(  # Use token to call downstream service
             config["endpoint"],
-            headers=post_headers, json=picklist_global_choice)
+            headers=post_headers, json=post_body)
         
         #json_response = response.json()
         
@@ -119,5 +121,3 @@ def acquire_and_use_token():
     else:
         print("Token acquisition failed")  # Examine token["error_description"] etc. to diagnose error
 
-
-acquire_and_use_token()
