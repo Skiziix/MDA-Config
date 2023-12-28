@@ -189,6 +189,77 @@ class PowerAppEntity:
 
         self.__post_attirbute(body)
 
+    def post_bool_attribute(self, schema_name, label_name):
+
+        body = {
+            "@odata.type": "Microsoft.Dynamics.CRM.BooleanAttributeMetadata",
+            "AttributeType": "Boolean",
+            "AttributeTypeName": {
+                "Value": "BooleanType"
+            },
+            "DefaultValue": False,
+            "OptionSet": {
+                "TrueOption": {
+                "Value": 1,
+                "Label": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                    "LocalizedLabels": [
+                    {
+                        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                        "Label": "Yes",
+                        "LanguageCode": 1033,
+                        "IsManaged": False
+                    }
+                    ]
+                }
+                },
+                "FalseOption": {
+                "Value": 0,
+                "Label": {
+                    "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                    "LocalizedLabels": [
+                    {
+                        "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                        "Label": "No",
+                        "LanguageCode": 1033,
+                        "IsManaged": False
+                    }
+                    ]
+                }
+                },
+                "OptionSetType": "Boolean"
+            },
+            "Description": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": "Boolean Attribute",
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                ]
+            },
+            "DisplayName": {
+                "@odata.type": "Microsoft.Dynamics.CRM.Label",
+                "LocalizedLabels": [
+                {
+                    "@odata.type": "Microsoft.Dynamics.CRM.LocalizedLabel",
+                    "Label": label_name,
+                    "LanguageCode": 1033,
+                    "IsManaged": False
+                }
+                ]
+            },
+            "RequiredLevel": {
+                "Value": "None",
+                "CanBeChanged": False,
+                "ManagedPropertyLogicalName": "canmodifyrequirementlevelsettings"
+            },
+            "SchemaName": "mow_" + schema_name,
+        }
+
+        self.__post_attirbute(body)
 
     ##################
     ## Helper Funcs ##
