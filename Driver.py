@@ -29,5 +29,5 @@ for attribute in attributes:
         table.post_memo_attribute(attribute, attributes[attribute]["label"])
 
     # If the attribute is a bool type past a bool column
-    elif attributes[attribute]["type"] == "bool": 
+    elif attributes[attribute]["type"] == "binary": 
         table.post_bool_attribute(attribute, attributes[attribute]["label"])
