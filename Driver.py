@@ -27,3 +27,7 @@ for attribute in attributes:
     # If the attribute is of type text post a memo attribute
     elif attributes[attribute]["type"] == "text":
         table.post_memo_attribute(attribute, attributes[attribute]["label"])
+
+    # If the attribute is a bool type past a bool column
+    elif attributes[attribute]["type"] == "bool": 
+        table.post_bool_attribute(attribute, attributes[attribute]["label"])
