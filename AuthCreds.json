@@ -1,8 +1,0 @@
-{
-    "authority": "https://login.microsoftonline.com/f45effe3-18d3-4702-8eaf-25005208951a",
-    "client_id": "e88b0fa0-1e6b-42d8-b90e-85988c220672",
-    "scope": ["https://prodmowery.crm.dynamics.com/.default"],
-    "secret": "VCE8Q~xb6h.cSAI0eEFS2i32qSf2UIgXYvPx-aVC",
-    "endpoint": "https://prodmowery.crm.dynamics.com/api/data/v9.2/EntityDefinitions(LogicalName='mow_constructionskillsevaluation')/Attributes"
-
-}
